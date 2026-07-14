@@ -1,6 +1,6 @@
 import random
 
-computer_guess_count = 4
+computer_guess_count = 0
 
 while True:
     try:
@@ -11,21 +11,24 @@ while True:
 
 print(f"The computer must guess {user_number}!")
 
-computer_guess = random.randint(1, 100)
+while True:
+    computer_guess = random.randint(1, 100)
 
-print(f"The computer guesses {computer_guess}.")
+    print(f"The computer guesses {computer_guess}.")
 
-if computer_guess_count == 5:
-    print("Computer ran out of turns! You win! :)")
+    if computer_guess_count == 5:
+        print("Computer ran out of turns! You win! :)")
+        break
 
-if computer_guess > user_number:
-    print("Too high!")
-    computer_guess_count += 1
-elif computer_guess < user_number:
-    print("Too low!")
-    computer_guess_count += 1
-else:
-    print("Computer guessed correctly! You lose! :(")
+    if computer_guess > user_number:
+        print("Too high!")
+        computer_guess_count += 1
+    elif computer_guess < user_number:
+        print("Too low!")
+        computer_guess_count += 1
+    else:
+        print("Computer guessed correctly! You lose! :(")
+        break
 
 
 # Loop
