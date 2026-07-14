@@ -29,18 +29,3 @@ while True:
     else:
         print("Computer guessed correctly! You lose! :(")
         break
-
-
-# Loop
-    # Display number user picked so user remember what they typed
-    # Computer guesses number
-    # If number too high
-        # Print "Computer guessed too high!"
-    # If number too low
-        # Print "Computer guessed too low!"
-    # If computer guesses == 5:
-        # Print "Computer ran out of turns! You win! :)"
-        # break
-    # Else
-        # Print "Computer guessed correctly! You lose! :("
-        # break
