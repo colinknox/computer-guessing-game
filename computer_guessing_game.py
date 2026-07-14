@@ -1,12 +1,33 @@
-computer_guess_count = 0
+import random
 
-try:
-    user_number = int(input("Please input a number between 1 and 100 for the computer to guess: "))
-except ValueError:
-    print("Invalid input.")
+computer_guess_count = 4
 
-# If input is invalid:
-    # Print "Input is invalid"
+while True:
+    try:
+        user_number = int(input("Please input a number between 1 and 100 for the computer to guess: "))
+        break
+    except ValueError:
+        print("Invalid input.")
+
+print(f"The computer must guess {user_number}!")
+
+computer_guess = random.randint(1, 100)
+
+print(f"The computer guesses {computer_guess}.")
+
+if computer_guess_count == 5:
+    print("Computer ran out of turns! You win! :)")
+
+if computer_guess > user_number:
+    print("Too high!")
+    computer_guess_count += 1
+elif computer_guess < user_number:
+    print("Too low!")
+    computer_guess_count += 1
+else:
+    print("Computer guessed correctly! You lose! :(")
+
+
 # Loop
     # Display number user picked so user remember what they typed
     # Computer guesses number
